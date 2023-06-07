@@ -24,16 +24,15 @@ $nama  = $_SESSION['user_name'];
         <header>
 
             <div class="user">
-                <img src="images/pic.jpg" alt="">
-                <h3 class="name">Halo, <?php echo $nama ?>!</h3>
-                <p class="post">front end developer</p>
+                <img src="images/orang.png" alt="">
+                <h3 class="name">Hello, <?php echo $nama ?>!</h3>
+                <p class="post">Markir Masehhhhhh</p>
             </div>
 
             <nav class="navbar">
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#lokasi">Lokasi Parkir</a></li>
-                    <li><a href="#history">History</a></li>
                     <li><a href="logout_form.php">Exit</a></li>
                 </ul>
             </nav>

@@ -39,6 +39,7 @@ while ($row = mysqli_fetch_assoc($result)){
             display: flex;
             flex-wrap: wrap;
             max-width: 500px;
+            
         }
         .seat {
             width: 50px;
