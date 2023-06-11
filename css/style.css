@@ -14,7 +14,11 @@
     justify-content: center;
     padding:20px;
     padding-bottom: 60px;
-    background: #eee;
+    background-image: url("../images/satu.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
     position: relative;
 }
 
@@ -22,7 +26,8 @@
     padding:20px;
     border-radius: 5px;
     box-shadow: 0 5px 10px rgba(0,0,0,.1);
-    background: #fff;
+    background: rgba(0,0,0,.1);
+    box-shadow: 0 0 10px #333;
     text-align: center;
     width: 500px;
 }
@@ -31,7 +36,7 @@
     font-size: 30px;
     text-transform: uppercase;
     margin-bottom: 10px;
-    color:#333;
+    color:#fff;
 }
 
 .form-container form input,
@@ -64,11 +69,11 @@
 .form-container form p{
     margin-top: 10px;
     font-size: 15px;
-    color:#333;
+    color: #333;
 }
  
 .form-container form p a{
-    color:#2f8abe;
+    color:#ffffff;
 }
 
 .form-container form .error-msg{
