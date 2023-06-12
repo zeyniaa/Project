@@ -13,7 +13,7 @@
             <ul>
                 <li><a href="#home">HOME</a></li>
                 <li><a href="konten/graphic.php">GRAPHIC</a></li>
-                <li><a href="#history">HISTORY</a></li>
+                <li><a href="konten/history.php">HISTORY</a></li>
                 <li><a href="logout_form.php">Exit</a></li>
             </ul>
         </nav>
