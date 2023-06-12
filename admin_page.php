@@ -11,9 +11,10 @@
     <div class="hero">
         <nav>
             <ul>
-                <li><a href="#">HOME</a></li>
-                <li><a href="#">GRAPHIC</a></li>
-                <li><a href="#">HISTORY</a></li>
+                <li><a href="#home">HOME</a></li>
+                <li><a href="konten/graphic.php">GRAPHIC</a></li>
+                <li><a href="#history">HISTORY</a></li>
+                <li><a href="logout_form.php">Exit</a></li>
             </ul>
         </nav>
         <div class="detel" >
