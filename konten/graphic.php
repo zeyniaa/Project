@@ -54,14 +54,16 @@ try {
         background: white;
       }
       .previous{
-        background-color: #fff;
+        background-color: rgba(54, 162, 235, 0.2);
         color: black;
-        text-align: center
+        text-align: center;
+        border-radius: 10px;
+        margin: 15px;
+        padding: 10px;
       }
       a{
         text-decoration: none;
         display: inline-block;
-        padding: 8px 16px;
       }
     </style>
   </head>
@@ -79,7 +81,7 @@ try {
         </div>
 
         <div class="previous">
-            <a href="admin_page.php" class="previous">&laquo; Previous</a>
+            <a href="../admin_page.php" class="previous">&laquo; Previous</a>
         </div>
     </div>
 
