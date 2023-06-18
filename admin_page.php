@@ -14,7 +14,7 @@
                 <li><a href="#home">HOME</a></li>
                 <li><a href="konten/graphic.php">GRAPHIC</a></li>
                 <li><a href="konten/history.php">HISTORY</a></li>
-                <li><a href="logout_form.php">Exit</a></li>
+                <li><a href="logout_form.php">EXIT</a></li>
             </ul>
         </nav>
         <div class="detel" >

@@ -4,74 +4,48 @@
 <?php
     include_once "../config.php";
 	$ID=$_POST['record'];
-	$qry=mysqli_query($conn, "SELECT * from user_db.riwayat_parkir Where area='$area'");
+	$qry=mysqli_query($conn, "SELECT * FROM riwayat_parkir Where `area`='$ID'");
 	$numberOfRow=mysqli_num_rows($qry);
 	if($numberOfRow>0){
 		while($row1=mysqli_fetch_array($qry)){
-      $ID=$row1["plat"];
-      $ID=$row1["area"]
+      $pID=$row1["id"];
 ?>
 <form id="update-Items" onsubmit="updateVariations()" enctype='multipart/form-data'>
-	<div class="form-group">
-      <input type="text" class="form-control" id="v_id" value="<?=$row1['variation_id']?>" hidden>
-    </div>
     <div class="form-group">
-        <label>Product:</label>
-        <select id="product" >
+        <input type="text" class="form-control" id="id" value="<?=$row1['id']?>" hidden>
+        </div>
+	
+    <div class="form-group">
+        <label>Plat :</label>
+        <select id="plat" >
         <?php
 
-        $sql="SELECT * from product where product_id=$pID";
+        $sql="SELECT * from riwayat_parkir where id=$pID";
         $result = $conn-> query($sql);
 
         if ($result-> num_rows > 0){
         while($row = $result-> fetch_assoc()){
-            echo"<option selected value='".$row['product_id']."'>".$row['product_name'] ."</option>";
+            echo"<option selected value='".$row['id']."'>".$row['plat'] ."</option>";
         }
         }
         ?>
         <?php
 
-            $sql="SELECT * from product where product_id!=$pID";
+            $sql="SELECT * from riwayat_parkir where id!=$pID";
             $result = $conn-> query($sql);
 
             if ($result-> num_rows > 0){
             while($row = $result-> fetch_assoc()){
-                echo"<option value='".$row['product_id']."'>".$row['product_name'] ."</option>";
+                echo"<option value='".$row['id']."'>".$row['plat'] ."</option>";
             }
             }
         ?>
         </select>
     </div>
+   
     <div class="form-group">
-        <label>Size:</label>
-        <select id="size" >
-        <?php
-
-            $sql="SELECT * from sizes where size_id=$sID";
-            $result = $conn-> query($sql);
-
-            if ($result-> num_rows > 0){
-            while($row = $result-> fetch_assoc()){
-                echo"<option selected value='".$row['size_id']."'>".$row['size_name'] ."</option>";
-            }
-            }
-        ?>
-        <?php
-
-            $sql="SELECT * from sizes where size_id!=$sID";
-            $result = $conn-> query($sql);
-
-            if ($result-> num_rows > 0){
-            while($row = $result-> fetch_assoc()){
-                echo"<option value='".$row['size_id']."'>".$row['size_name'] ."</option>";
-            }
-            }
-        ?>
-        </select>
-    </div>
-    <div class="form-group">
-        <label for="qty">Stock Quantity:</label>
-        <input type="number" class="form-control" id="qty" value="<?=$row1['quantity_in_stock']?>"  required>
+        <label for="area">Change Area :</label>
+        <input type="number" class="form-control" id="area" value="<?=$row1['area']?>"  required>
     </div>
     <div class="form-group">
       <button type="submit" style="height:40px" class="btn btn-primary">Update Variation</button>

@@ -38,13 +38,13 @@
             cursor: pointer;
         }
         
-        .btn-primary {
+        .btn-succes {
             background-color: #007bff;
             color: #fff;
             border: none;
         }
         
-        .btn-primary:hover {
+        .btn-succes:hover {
             background-color: #0056b3;
         }
         
@@ -129,9 +129,9 @@
             <td><?=$row["plat"]?></td>      
             <td><?=$row["area"]?></td>     
             <td><?=$row["date"]?></td>     
-            <td><button class="btn btn-primary" style="height:40px" onclick="edit('<?=$row['variation_id']?>')"><a href="../modul/edit.php">Edit</a></button></td>
-            <td><button class="btn btn-danger" style="height:40px" onclick="edit('<?=$row['variation_id']?>')"><a href="../modul/exit.php">Exit</a></button></td>
-            <td><button class="btn btn-danger" style="height:40px" onclick="edit('<?=$row['variation_id']?>')"><a href="../modul/delete.php">Delete</a></button></td>
+            <td><a href="../modul/edit.php" class="btn btn-succes" style="height:40px">Edit</a></button></td>
+            <td><button class="btn btn-danger" style="height:40px" onclick="exit('<?=$row['area']?>')"><a href="../modul/exit.php">Exit</a></button></td>
+            <td><button class="btn btn-danger" style="height:40px" onclick="Delete('<?=$row['user_form']?>')"><a href="../modul/delete.php">Delete</a></button></td>
             </tr>
             <?php
                     $count=$count+1;
